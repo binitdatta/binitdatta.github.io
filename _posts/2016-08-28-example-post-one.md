@@ -27,17 +27,17 @@ Microservices Still are services.If you have developed REST services in Java / .
 
 **1.** We do it all the time in our daily lives. Even the ones among us that do not know a thing about Microservices does use service discovery.
 
-**2.** Think of using Google a centralized service registry of services (legal/restaurants/food distribution/laundry/hair salons/malls / entertainment centers and what not)
+**2.** Think of using Google a centralized service registry of services (legal/restaurants/food distribution/laundry/hair salons/malls / entertainment centers and what not).
 
 **3.** These services come up, open shop/website online, Google finds them through web crawling and indexes them in its centralized registry.
 	
-**4.** When we search the google web client, Google searches its index in the service registry and returns the result to us
+**4.** When we search the google web client, Google searches its index in the service registry and returns the result to us.
 	
 **5.** This model of service discovery is pull based. Google web crawler pulls location data from the websites of the services.
 
 **6.** The Microservices Service discovery is same. The only difference is that it is push based. Let me explain.
 
-**7.** There is a central Microservice Service Registry Cluster/ More than one Service Discovery Microservices are running in the cluster. More than one instances are run to provide High Availability.
+**7.** There is a central Microservice Service Registry Cluster. More than one Service Discovery Microservices are running in the cluster. More than one instances are run to provide High Availability.
 
 **8.** Other Microservices, when they come up, push their location information using a logical name, to the Service Discovery cluster.
 	
@@ -97,9 +97,10 @@ Microservices Still are services.If you have developed REST services in Java / .
 	
 **2.**  The developer provides the logical name of the service to be called,  the API endpoint and Declarative Client Feign makes the call.
  
-**lient Side Load Balancing Ribbon**
+**Client Side Load Balancing Ribbon**
 
 **1.**  The client receives many service endpoints from Service Discovery Registry.
+
 **2.**  Ribbon calls one of the least loaded APIs.
 
  **Centralized Tracing Zipkin**
